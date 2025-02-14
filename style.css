@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(rgb(255, 196, 0), rgb(0, 183, 255));
+}
+body #zar {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 20px;
+  margin: 10px;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .map {
+  width: auto;
+  height: auto;
+  padding: 5px;
+  background-color: white;
+}
+body .map table {
+  width: 100%;
+  height: 100%;
+}
+body .map table .base {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 5px;
+  margin: auto;
+}
+body .map table h1 {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+body .map table .position {
+  width: 20px;
+  height: 20px;
+  margin: auto;
+}
+body .map table .blueBase {
+  background-color: rgb(0, 238, 255);
+}
+body .map table .greenSolder {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: green;
+  border: 2px solid black;
+}
+body .map table .redSolder {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: red;
+  border: 2px solid black;
+}
+body .map table .blueSolder {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: blue;
+  border: 2px solid black;
+}
+body .map table .yellowSolder {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: yellow;
+  border: 2px solid black;
+}
+body .map table .redBase {
+  background-color: rgb(255, 78, 34);
+}
+body .map table .greenBase {
+  background-color: greenyellow;
+}
+body .map table .yellowBase {
+  background-color: rgb(255, 255, 107);
+}
+body .map table tr td {
+  border: 1px solid black;
+  max-width: 50px;
+  max-height: 50px;
+}/*# sourceMappingURL=style.css.map */
