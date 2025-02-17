@@ -25,14 +25,21 @@ body {
   }
 
   .map {
-    width: auto;
-    height: auto;
+    width: 750px;
+    aspect-ratio: 1/1;
     padding: 5px;
     background-color: white;
 
     table {
       width: 100%;
       height: 100%;
+      border-collapse: collapse;
+
+      td {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+      }
 
       .base {
         width: 50px;
@@ -46,6 +53,17 @@ body {
         margin: auto;
       }
 
+      tr,
+      td {
+        margin: 0;
+      }
+
+      .star {
+        background-image: url("./assets/star-icon-vector.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+
       h1 {
         width: 100%;
         text-align: center;
@@ -53,8 +71,8 @@ body {
       }
 
       .position {
-        width: 20px;
-        height: 20px;
+        max-width: 50px;
+        aspect-ratio: 1/1;
         margin: auto;
       }
 
@@ -63,6 +81,7 @@ body {
       }
 
       .greenSolder {
+        margin: auto;
         width: 15px;
         height: 15px;
         border-radius: 50%;
@@ -71,6 +90,7 @@ body {
       }
 
       .redSolder {
+        margin: auto;
         width: 15px;
         height: 15px;
         border-radius: 50%;
@@ -79,6 +99,7 @@ body {
       }
 
       .blueSolder {
+        margin: auto;
         width: 15px;
         height: 15px;
         border-radius: 50%;
@@ -87,6 +108,7 @@ body {
       }
 
       .yellowSolder {
+        margin: auto;
         width: 15px;
         height: 15px;
         border-radius: 50%;
@@ -104,15 +126,6 @@ body {
 
       .yellowBase {
         background-color: rgb(255, 255, 107);
-      }
-
-      tr {
-        td {
-          border: 1px solid black;
-          max-width: 50px;
-          max-height: 50px;
-        }
-
       }
 
     }

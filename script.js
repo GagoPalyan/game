@@ -87,7 +87,6 @@ zar.addEventListener("click", () => {
 		rules.step = "step4";
 		let zarNum = random();
 		rules.zar = zarNum;
-		console.log(rules.step);
 
 		return (zar.innerHTML = `<h1>${zarNum}</h1>`);
 	}
@@ -102,6 +101,7 @@ player1.figurs.forEach((figur) => {
 		}
 		if (rules.step === "step2") {
 			figur.position += rules.zar;
+			console.log(figur.position);
 			zar.innerText = "click";
 			rules.step = "step3";
 			if (figur.position + rules.zar > 55) {
@@ -111,17 +111,16 @@ player1.figurs.forEach((figur) => {
 			const position = document.querySelector(
 				`.redSolderPosition${figur.position}`
 			);
-			const loseMove = player2.figurs.filter((obj) => {
-				console.log(obj.position);
-				console.log(figur.position);
-				if (figur.position < obj.position) {
-					return figur.position == obj.position && position.id !== "star";
-				}
-				if (figur.position > obj.position) {
-					return obj.position == figur.position && position.id !== "star";
+			const loseMove = player2.figurs.find((enemy) => {
+				if (
+					(figur.position - 26 == enemy.position ||
+						figur.position == enemy.position - 26) &&
+					position.id != "star"
+				) {
+					return figur;
 				}
 			});
-			if (loseMove.length >= 1) {
+			if (loseMove !== undefined) {
 				figur.position = 0;
 				return document.getElementById("redBase").appendChild(figur.solder);
 			}
@@ -140,6 +139,7 @@ player2.figurs.forEach((figur) => {
 		}
 		if (rules.step === "step4") {
 			figur.position += rules.zar;
+			console.log(figur.position);
 			zar.innerText = "click";
 			rules.step = "step1";
 			if (figur.position + rules.zar > 55) {
@@ -149,17 +149,16 @@ player2.figurs.forEach((figur) => {
 			const position = document.querySelector(
 				`.blueSolderPosition${figur.position}`
 			);
-			const loseMove = player2.figurs.filter((obj) => {
-				console.log(obj.position);
-				console.log(figur.position);
-				if (figur.position < obj.position) {
-					return figur.position == obj.position && position.id !== "star";
-				}
-				if (figur.position > obj.position) {
-					return obj.position == figur.position && position.id !== "star";
+			const loseMove = player1.figurs.find((enemy) => {
+				if (
+					(figur.position - 26 == enemy.position ||
+						figur.position == enemy.position - 26) &&
+					position.id != "star"
+				) {
+					return figur;
 				}
 			});
-			if (loseMove.length >= 1) {
+			if (loseMove !== undefined) {
 				figur.position = 0;
 				return document.getElementById("blueBase").appendChild(figur.solder);
 			}
