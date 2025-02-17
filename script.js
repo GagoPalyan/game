@@ -63,6 +63,9 @@ const player2 = {
 	],
 };
 
+player1.name = prompt("Player 1 enter your name");
+player2.name = prompt("Player 2 enter your name");
+
 let rules = {
 	step: "step1",
 	player: player1,
@@ -72,7 +75,7 @@ let rules = {
 const zar = document.getElementById("zar");
 const playerTitle = document.getElementById("player");
 
-playerTitle.innerText = "1 player";
+playerTitle.innerText = player1.name;
 
 const random = () => Math.floor(Math.random() * 5) + 1;
 
@@ -124,7 +127,7 @@ player1.figurs.forEach((figur) => {
 				figur.position = 0;
 				return document.getElementById("redBase").appendChild(figur.solder);
 			}
-			playerTitle.innerText = "2 player";
+			playerTitle.innerText = player2.name;
 			return position.appendChild(figur.solder);
 		}
 		alert("wrong move");
@@ -162,7 +165,7 @@ player2.figurs.forEach((figur) => {
 				figur.position = 0;
 				return document.getElementById("blueBase").appendChild(figur.solder);
 			}
-			playerTitle.innerText = "1 player";
+			playerTitle.innerText = player1.name;
 			return position.appendChild(figur.solder);
 		}
 		alert("wrong move");
