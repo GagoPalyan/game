@@ -59,9 +59,14 @@ body {
       }
 
       .star {
-        background-image: url("./assets/star-icon-vector.jpg");
-        background-size: cover;
-        background-position: center;
+        position: relative;
+
+        i {
+          position: absolute;
+          font-size: 30px;
+          top: 10px;
+          left: 10px
+        }
       }
 
       h1 {
@@ -76,12 +81,8 @@ body {
         margin: auto;
       }
 
-      .blueBase {
-        background-color: rgb(0, 238, 255);
-      }
-
       .greenSolder {
-        margin: auto;
+        margin: 2px auto;
         width: 15px;
         height: 15px;
         border-radius: 50%;
@@ -90,7 +91,7 @@ body {
       }
 
       .redSolder {
-        margin: auto;
+        margin: 2px auto;
         width: 15px;
         height: 15px;
         border-radius: 50%;
@@ -99,7 +100,7 @@ body {
       }
 
       .blueSolder {
-        margin: auto;
+        margin: 2px auto;
         width: 15px;
         height: 15px;
         border-radius: 50%;
@@ -108,7 +109,7 @@ body {
       }
 
       .yellowSolder {
-        margin: auto;
+        margin: 2px auto;
         width: 15px;
         height: 15px;
         border-radius: 50%;
@@ -116,18 +117,50 @@ body {
         border: 2px solid black;
       }
 
-      .redBase {
+
+      .redBase,
+      .redSolderPosition1,
+      .redSolderPosition52,
+      .redSolderPosition53,
+      .redSolderPosition54,
+      .redSolderPosition55,
+      .redSolderPosition56 {
         background-color: rgb(255, 78, 34);
       }
 
-      .greenBase {
+      .blueBase,
+      .blueSolderPosition1,
+      .blueSolderPosition52,
+      .blueSolderPosition53,
+      .blueSolderPosition54,
+      .blueSolderPosition55,
+      .blueSolderPosition56 {
+        background-color: rgb(0, 238, 255);
+      }
+
+      .greenBase,
+      .greenSolderPosition1,
+      .greenSolderPosition52,
+      .greenSolderPosition53,
+      .greenSolderPosition54,
+      .greenSolderPosition55,
+      .greenSolderPosition56 {
         background-color: greenyellow;
       }
 
-      .yellowBase {
+      .yellowBase,
+      .yellowSolderPosition1,
+      .yellowSolderPosition52,
+      .yellowSolderPosition53,
+      .yellowSolderPosition54,
+      .yellowSolderPosition55,
+      .yellowSolderPosition56 {
         background-color: rgb(255, 255, 107);
       }
 
+      #win {
+        background: conic-gradient(from 45deg at 50% 50%, rgba(255, 255, 107, 1) 0%, rgba(255, 255, 107, 1) 25%, rgba(0, 238, 255, 1) 25.001%, rgba(0, 188, 212, 1) 50%, rgba(173, 255, 47, 1) 50.01%, rgba(173, 255, 47, 1) 75%, rgba(255, 78, 34, 1) 75.01%, rgba(255, 78, 34, 1) 100%);
+      }
     }
   }
 }

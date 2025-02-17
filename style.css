@@ -55,9 +55,13 @@ body .map table td {
   margin: 0;
 }
 body .map table .star {
-  background-image: url("./assets/star-icon-vector.jpg");
-  background-size: cover;
-  background-position: center;
+  position: relative;
+}
+body .map table .star i {
+  position: absolute;
+  font-size: 30px;
+  top: 10px;
+  left: 10px;
 }
 body .map table h1 {
   width: 100%;
@@ -69,11 +73,8 @@ body .map table .position {
   aspect-ratio: 1/1;
   margin: auto;
 }
-body .map table .blueBase {
-  background-color: rgb(0, 238, 255);
-}
 body .map table .greenSolder {
-  margin: auto;
+  margin: 2px auto;
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -81,7 +82,7 @@ body .map table .greenSolder {
   border: 2px solid black;
 }
 body .map table .redSolder {
-  margin: auto;
+  margin: 2px auto;
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -89,7 +90,7 @@ body .map table .redSolder {
   border: 2px solid black;
 }
 body .map table .blueSolder {
-  margin: auto;
+  margin: 2px auto;
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -97,19 +98,49 @@ body .map table .blueSolder {
   border: 2px solid black;
 }
 body .map table .yellowSolder {
-  margin: auto;
+  margin: 2px auto;
   width: 15px;
   height: 15px;
   border-radius: 50%;
   background-color: yellow;
   border: 2px solid black;
 }
-body .map table .redBase {
+body .map table .redBase,
+body .map table .redSolderPosition1,
+body .map table .redSolderPosition52,
+body .map table .redSolderPosition53,
+body .map table .redSolderPosition54,
+body .map table .redSolderPosition55,
+body .map table .redSolderPosition56 {
   background-color: rgb(255, 78, 34);
 }
-body .map table .greenBase {
+body .map table .blueBase,
+body .map table .blueSolderPosition1,
+body .map table .blueSolderPosition52,
+body .map table .blueSolderPosition53,
+body .map table .blueSolderPosition54,
+body .map table .blueSolderPosition55,
+body .map table .blueSolderPosition56 {
+  background-color: rgb(0, 238, 255);
+}
+body .map table .greenBase,
+body .map table .greenSolderPosition1,
+body .map table .greenSolderPosition52,
+body .map table .greenSolderPosition53,
+body .map table .greenSolderPosition54,
+body .map table .greenSolderPosition55,
+body .map table .greenSolderPosition56 {
   background-color: greenyellow;
 }
-body .map table .yellowBase {
+body .map table .yellowBase,
+body .map table .yellowSolderPosition1,
+body .map table .yellowSolderPosition52,
+body .map table .yellowSolderPosition53,
+body .map table .yellowSolderPosition54,
+body .map table .yellowSolderPosition55,
+body .map table .yellowSolderPosition56 {
   background-color: rgb(255, 255, 107);
+}
+body .map table #win {
+  background: conic-gradient(from 45deg at 50% 50%, rgb(255, 255, 107) 0%, rgb(255, 255, 107) 25%, rgb(0, 238, 255) 25.001%, rgb(0, 188, 212) 50%, rgb(173, 255, 47) 50.01%, rgb(173, 255, 47) 75%, rgb(255, 78, 34) 75.01%, rgb(255, 78, 34) 100%);
 }/*# sourceMappingURL=style.css.map */
